@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>To My Love 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #ffe6eb, #fff);
+    font-family: 'Dancing Script', cursive;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  }
+
+  .petal {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 10px 10px, #ffb6c1, #ff69b4);
+    border-radius: 50% 50% 50% 0;
+    animation: fall linear infinite;
+    opacity: 0.8;
+  }
+
+  .letter {
+    background: #fffdfd;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    max-width: 700px;
+    width: 90%;
+    text-align: left;
+    z-index: 10;
+    overflow-y: auto;
+    max-height: 85vh;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h2 {
+    text-align: center;
+    color: #e63946;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.3em;
+    line-height: 1.5;
+    color: #444;
+    white-space: pre-line;
+  }
+
+  .reveal-button {
+    display: block;
+    text-align: center;
+    margin: 25px auto 0;
+    font-size: 1.3em;
+    color: #e63946;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.3s ease;
+  }
+
+  .reveal-button:hover {
+    color: #c1273c;
+  }
+
+  .proposal {
+    text-align: center;
+    color: #e63946;
+    font-size: 1.6em;
+    margin-top: 20px;
+    display: none;
+  }
+
+  .footer {
+    text-align: right;
+    margin-top: 20px;
+    font-style: italic;
+    color: #333;
+  }
+</style>
+</head>
+
+<body>
+
+<script>
+  // Falling petals
+  for (let i = 0; i < 25; i++) {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    petal.style.left = Math.random() * 100 + 'vw';
+    petal.style.animationDuration = (6 + Math.random() * 5) + 's';
+    petal.style.animationDelay = Math.random() * 5 + 's';
+    document.body.appendChild(petal);
+  }
+</script>
+
+<div class="letter">
+  <h2>Hi Jaya ✨</h2>
+  <p>
+I'm really sorry if this message upsets or angers you. That’s not my intention at all, and I hope you can understand where I’m coming from.
+
+The truth is, I’ve been struggling with my emotions. Day by day, it's getting harder to hold things in because carrying all of this inside is tearing me apart.
+
+Every day, I find it harder to control my emotions. I just want to be honest with you — because keeping quiet doesn't feel right anymore.
+
+I still love you deeply.
+
+I know I made a big mistake in the past, and that’s what caused us to fall apart. I’ve had to live with that, and it’s not easy. After three years of silence, seeing you again last year brought back a kind of happiness I hadn’t felt in a long time. And now, a year later, those same feelings are even stronger — like the old, happy days we once shared.
+
+I’m not trying to justify anything or tell long stories to defend my past. I take responsibility for what I did, and I’m not asking for anything based on sympathy.
+
+What scares me the most is the thought of losing you forever — even as a friend. That’s a pain I don’t think I can bear. And yes, I know this might sound bold, but I have to say it:
+I don’t want to lose you to someone else.
+I want you in my life — not just as a friend, but as my partner. Someone I can grow with, explore life with, and build a future with.
+
+Please don’t be angry. I’m saying all of this because I truly care. I respect you deeply, and whatever your answer is, I’ll accept it. I just needed to be honest.
+
+And if you don’t feel the same, I understand. I truly do. All I ask is… don’t shut me out completely. That’s a kind of loss I don’t think I could ever fully recover from.
+
+I know this might feel sudden. Maybe even crazy. But I’m not saying it recklessly. I’ve had time to think. Time to grow. Time to realize what really matters.
+
+So I’ll say this plainly and from the bottom of my heart:
+  </p>
+
+  <div class="reveal-button" onclick="showProposal()">💖 Click here for a surprise 💖</div>
+
+  <div id="proposal" class="proposal">Jaya, will you marry me? 💍</div>
+
+  <div class="footer">With all my heart ❤️</div>
+</div>
+
+<script>
+  function showProposal() {
+    const proposal = document.getElementById("proposal");
+    const button = document.querySelector(".reveal-button");
+    proposal.style.display = "block";
+    proposal.style.animation = "fadeIn 1.5s ease";
+    button.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
